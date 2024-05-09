@@ -1,0 +1,1081 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Luckiest+Guy&family=Single+Day&display=swap');
+
+:root {
+    --color: linear-gradient(135deg, #14ffe9, #ffeb3b, #ff00e0);
+    --color: #14ffe9 !important;
+    --another-color: white;
+}
+
+.gloria {
+    font-family: "Gloria Hallelujah", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#playPauseButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+#playPauseIcon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 100px var(--color);
+}
+
+@keyframes glow {
+    20% {
+        --color: #14ffe9 !;
+    }
+
+    40% {
+        --color: blue;
+    }
+
+    60% {
+        --color: #ff00e0;
+    }
+
+    80% {
+        --color: #ffeb3b;
+    }
+
+    100% {
+        --color: rgb(0, 250, 0);
+    }
+}
+
+.glowing {
+    animation-name: glow;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+}
+
+.lucky {
+    font-family: "Luckiest Guy", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.single {
+    font-family: "Single Day", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../../bg.jpg);
+    background-position: top;
+    background-size: contain;
+}
+
+.body {
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+li {
+    list-style: none;
+}
+
+html {
+    scroll-behavior: smooth;
+    line-height: 100%;
+}
+
+h1 {
+    font-size: 4.5vw;
+    line-height: 100%;
+    gap: .5vw;
+    color: white;
+}
+
+h1 img {
+    width: 4vw;
+}
+
+h2 {
+    font-size: 1.5vw;
+    line-height: 100%;
+    gap: .5vw;
+    color: white;
+}
+
+h2 img {
+    width: 1.5vw;
+}
+
+h3 {
+    font-size: 2vw;
+    line-height: 100%;
+    color: #EDB623;
+}
+
+p {
+    font-size: 1.5vw;
+    line-height: 120%;
+    color: white;
+}
+
+.btn {
+    font-size: 1.4vw;
+    padding: .7vw 2.5vw;
+    background-color: #B4FC55;
+    border: .2vw solid;
+    border-color: black;
+    transform: rotateZ(4deg);
+    transition: all .2s;
+}
+
+.btn:hover {
+    background-color: white !important;
+    /* border-color: white; */
+    transform: rotateZ(0deg);
+}
+
+.btn1 {
+    padding: .5vw 1vw;
+    background: black;
+    border-radius: .7vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5vw;
+    font-size: 1.2vw;
+    line-height: normal;
+    color: white;
+    font-family: "Luckiest Guy", cursive;
+    transition: all .2s;
+}
+
+.btn1 .arrow {
+    width: 1.2vw;
+}
+
+.btn1:hover {
+    filter: invert(100%);
+}
+
+/*--------------- hero -------------*/
+
+.hero {
+    width: 100%;
+    height: 40vw;
+    background: url(../../logo.png) no-repeat;
+    background-position: top center;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 7vw;
+}
+
+.hero nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1vw 3vw;
+}
+
+.hero .logo img {
+    width: 8vw;
+}
+
+.hero nav .btn {
+    background-color: #FF3CFF;
+}
+
+.hero_buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: .7vw;
+}
+
+.hero_buttons .socials img {
+    width: 3vw;
+    padding: .4vw;
+    background-color: black;
+    border: .2vw solid;
+    border-color: #B4FC55;
+    transition: all .2s;
+}
+
+.hero_buttons .socials1 img {
+    transform: rotate(-5deg);
+}
+
+.hero_buttons .socials2 img {
+    transform: rotate(13deg);
+}
+
+.hero_buttons .socials img:hover {
+    filter: invert(100%);
+    transform: rotateZ(0deg);
+}
+
+.strip {
+    background-color: #D39BFF;
+    padding: .5vw;
+    border: .2vw solid black;
+    border-left: none;
+    border-right: none;
+}
+
+.strip p {
+    line-height: 100%;
+    color: black;
+}
+
+/* ----------------about---------------- */
+
+.about {
+    width: 100%;
+    height: auto;
+    /* background: url(../images/about-bg.png) no-repeat; */
+    background-size: 100% 100%;
+    background-position: top center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7vw 5vw;
+    padding-bottom: 5vw;
+}
+
+.about .left {
+    width: 40%;
+    text-align: right;
+    position: relative;
+}
+
+.about .left img {
+    width: 47%;
+}
+
+.about .left .wolf1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    animation: bounceInLeft 1s infinite alternate-reverse;
+}
+
+.about .left .wolf2 {
+    position: absolute;
+    top: 0;
+    left: 25%;
+    z-index: 2;
+    animation: bounceInLeft 1.5s infinite alternate-reverse;
+}
+
+.about .left .wolf3 {
+    z-index: 3;
+    position: relative;
+    animation: bounceInLeft 2.3s infinite alternate-reverse;
+}
+
+.about .right {
+    width: 50%;
+    padding-right: 5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2vw;
+}
+
+/* ------------platforms------------ */
+
+.platforms {
+    width: 100%;
+    display: flex;
+    padding: 2vw .5vw;
+}
+
+.platforms .left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vw;
+    background: #01FD8F;
+    padding: 2vw 0;
+}
+
+.platforms .left img.wolf {
+    width: 30%;
+    animation: bounce 1s infinite;
+}
+
+.platforms .left:nth-child(2) {
+    background: #FF00FF;
+}
+
+/*------------- utilities --------------
+-------------*/
+
+.utilities {
+    width: 100%;
+    height: auto;
+    padding: 5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vw;
+}
+
+.utilities h1 {
+    text-shadow: 0 0 1.1vw #C4A7FD;
+}
+
+.utilities .content {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0vw 15vw;
+}
+
+.utilities .content .box {
+    width: 48%;
+    padding: 2vw;
+    border: .2vw solid white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5vw;
+    background: inherit;
+}
+
+.utilities .content .box:nth-child(1) {
+    background: url(../images/box1-bg.png) no-repeat;
+    background-size: 100% 100%;
+    background-position: top center;
+}
+
+.utilities .content .box:nth-child(2) {
+    background: url(../images/box2-bg.png) no-repeat;
+    background-size: 100% 100%;
+    background-position: top center;
+}
+
+.utilities .content1 .box:nth-child(1) {
+    background: url(../images/box3-bg.png) no-repeat;
+    background-size: 100% 100%;
+    background-position: top center;
+}
+
+.utilities .content1 .box:nth-child(2) {
+    background: url(../images/box4-bg.png) no-repeat;
+    background-size: 100% 100%;
+    background-position: top center;
+}
+
+/* -----------tokenomics---------- */
+
+.tokenomics {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 4vw;
+    padding: 5vw 12vw;
+}
+
+.tokenomics h1 img {
+    animation: scale 2s infinite alternate-reverse;
+    transform-origin: bottom center;
+}
+
+@keyframes scale {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+.tokenomics .content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tokenomics .content .box {
+    width: 22%;
+    padding: .7vw;
+    border: .25vw solid white;
+    border-radius: 1vw;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5vw;
+}
+
+.tokenomics .content .box h2:nth-child(1) {
+    color: #8cffbb;
+    background: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 90%;
+    padding: .3vw 0;
+}
+
+.tokenomics .content1 {
+    align-items: center;
+}
+
+.tokenomics .content .left {
+    width: 50%;
+}
+
+.tokenomics .content .left h1 {
+    padding: 2vw;
+    border: .2vw solid white;
+    border-radius: 1vw;
+}
+
+.tokenomics .content .left img {
+    width: 70%;
+}
+
+.tokenomics .content .right {
+    width: 50%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .7vw;
+}
+
+.tokenomics .content .right img {
+    width: 43%;
+    animation: shakeX 2s infinite linear forwards;
+}
+
+/*------------- roadmap ---------------*/
+
+.map {
+    width: 100%;
+    padding: 5vw 15vw;
+    background-color: #04FC8F;
+    margin-top: -1.5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 3vw;
+}
+
+.map .content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.map h1 {
+    color: #8cffbb;
+}
+
+.map h1 img {
+    animation: rotate 1s infinite linear forwards;
+    transform-origin: center;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotateZ(0deg);
+    }
+
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+.map .content .box {
+    width: 30%;
+    background-color: #8cffbb;
+    border: .2vw solid #8cffbb;
+    border-radius: 2vw;
+    padding: 2.5vw 2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.2vw;
+    box-shadow: 0 0 2.5vw rgba(156, 106, 255, 0.89);
+}
+
+.map .content .box h3 {
+    color: white;
+}
+
+/* ------------------partners------------
+---------- */
+
+.partners {
+    width: 100%;
+    height: auto;
+    padding: 5vw 15vw;
+    text-align: center;
+    background-color: #04FC8F;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vw;
+    position: relative;
+}
+
+.partners h1 {
+    color: black;
+}
+
+.partners h1 img {
+    animation: shakeY 1.5s infinite;
+}
+
+.partners .content {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.partners .content img {
+    width: 30%;
+}
+
+/*------------------- join -------------
+--------*/
+
+.join {
+    width: 100%;
+    background: #00001C;
+    padding: 5vw 15vw;
+    padding-bottom: 1vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vw;
+    margin-top: -.2vw;
+    position: relative;
+}
+
+.join h1 img {
+    animation: shakeX 2s infinite;
+}
+
+.join .btn2 {
+    display: flex;
+    align-items: center;
+    gap: .5vw;
+    font-size: 1.2vw;
+    color: #050505;
+    background: #04FC8F;
+    border-radius: 1.5vw;
+    padding: 2vw;
+    box-shadow: 0 0 1.1vw rgba(4, 252, 143, 0.74);
+    transition: all .2s;
+}
+
+.join .btn2:hover {
+    filter: invert(100%);
+}
+
+.join .btn2 img {
+    width: 1.2vw;
+}
+
+footer {
+    text-align: center;
+}
+
+footer h1 {
+    color: #8cffbb;
+}
+
+footer h1 img {
+    margin: 0 -.5vw;
+    animation: bounce 1s infinite !important;
+}
+
+footer .links {
+    padding-top: 2vw;
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    justify-content: center;
+}
+
+footer .links a img {
+    width: 3vw;
+    transition: all .2s;
+}
+
+footer .links a img:hover {
+    filter: invert(100%);
+}
+
+.copy {
+    width: 100%;
+    background: #000E17;
+    padding: 1vw 10vw;
+    text-align: center;
+}
+
+.copy p {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.3vw;
+}
+
+/*---------------- website responsive -----------
+------------*/
+
+@media(max-width:600px) {
+    h1 {
+        font-size: 8vw;
+    }
+
+    h1 img {
+        width: 8vw;
+    }
+
+    h2 {
+        font-size: 3.5vw;
+    }
+
+    h2 img {
+        width: 3.5vw;
+    }
+
+    h3 {
+        font-size: 3.5vw;
+    }
+
+    p {
+        font-size: 3.2vw;
+    }
+
+    .btn {
+        font-size: 3.6vw;
+        padding: 1.3vw 4vw;
+        border: .5vw solid;
+    }
+
+    .btn1 {
+        padding: 1.3vw 4vw;
+        border-radius: 1.5vw;
+        gap: 1vw;
+        font-size: 3.2vw;
+    }
+
+    .btn1 .arrow {
+        width: 3.2vw;
+    }
+
+    /*--------------- hero -------------*/
+    .hero {
+        width: 100%;
+        height: 90vw;
+    }
+
+    .hero nav {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1vw 3vw;
+    }
+
+    .hero .logo img {
+        width: 13vw;
+    }
+
+    .hero_buttons {
+        gap: 2.9vw;
+    }
+
+    .hero_buttons .socials img {
+        width: 6.5vw;
+        padding: 1vw;
+    }
+
+    .strip {
+        background-color: #D39BFF;
+        padding: 2vw;
+        border: .4vw solid black;
+        border-left: none;
+        border-right: none;
+    }
+
+    .strip p {
+        line-height: 100%;
+        color: black;
+    }
+
+    /* ----------------about---------------- */
+    .about {
+        width: 100%;
+        height: auto;
+        background: url(../images/about-bg.png) no-repeat;
+        background-size: 100% 100%;
+        background-position: top center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10vw 5vw;
+        padding-bottom: 5vw;
+        gap: 10vw;
+        margin-top: -.7vw;
+    }
+
+    .about .left {
+        width: 60%;
+        text-align: right;
+        position: relative;
+    }
+
+    .about .left img {
+        width: 47%;
+    }
+
+    .about .right {
+        width: 100%;
+        padding-right: 5vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 3vw;
+    }
+
+    /* ------------platforms------------ */
+    .platforms {
+        width: 100%;
+        display: flex;
+        padding: 5vw .5vw;
+    }
+
+    .platforms .left {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2vw;
+        background: #01FD8F;
+        padding: 2vw 0;
+    }
+
+    .platforms .left img.wolf {
+        width: 55%;
+    }
+
+    .platforms .left:nth-child(2) {
+        background: #FF00FF;
+    }
+
+    /*------------- utilities --------------
+    -------------*/
+    .utilities {
+        width: 100%;
+        height: auto;
+        padding: 7vw 0vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4vw;
+    }
+
+    .utilities h1 {
+        text-shadow: 0 0 1.1vw #C4A7FD;
+    }
+
+    .utilities .content {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        padding: 0vw 5vw;
+    }
+
+    .utilities .content .box {
+        width: 48%;
+        padding: 2vw;
+        border: .2vw solid white;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2vw;
+        background: inherit;
+    }
+
+    .utilities .content .box:nth-child(1) {
+        background: url(../images/box1-bg.png) no-repeat;
+        background-size: 100% 100%;
+        background-position: top center;
+    }
+
+    .utilities .content .box:nth-child(2) {
+        background: url(../images/box2-bg.png) no-repeat;
+        background-size: 100% 100%;
+        background-position: top center;
+    }
+
+    .utilities .content1 .box:nth-child(1) {
+        background: url(../images/box3-bg.png) no-repeat;
+        background-size: 100% 100%;
+        background-position: top center;
+    }
+
+    .utilities .content1 .box:nth-child(2) {
+        background: url(../images/box4-bg.png) no-repeat;
+        background-size: 100% 100%;
+        background-position: top center;
+    }
+
+    /* -----------tokenomics---------- */
+    .tokenomics {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 9vw;
+        padding: 9vw 8vw;
+    }
+
+    .tokenomics .content {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 7vw;
+        justify-content: space-between;
+    }
+
+    .tokenomics .content .box {
+        width: 48%;
+        padding: .7vw;
+        border: .25vw solid white;
+        border-radius: 1vw;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 2.5vw;
+    }
+
+    .tokenomics .content .box h2:nth-child(1) {
+        color: #8cffbb;
+        background: white;
+        padding: 1vw 0;
+        padding-bottom: .75vw;
+    }
+
+    .tokenomics .content .left {
+        width: 100%;
+        text-align: center;
+    }
+
+    .tokenomics .content .left img {
+        width: 70%;
+    }
+
+    .tokenomics .content .right {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5vw;
+    }
+
+    .tokenomics .content .right img {
+        width: 50%;
+        margin-left: 10%;
+    }
+
+    /*------------- roadmap ---------------*/
+    .map {
+        width: 100%;
+        padding: 10vw 15vw;
+        background-color: #04FC8F;
+        margin-top: -1.5vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 7vw;
+    }
+
+    .map .content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 7vw;
+        justify-content: space-between;
+    }
+
+    .map h1 {
+        color: #8cffbb;
+    }
+
+    .map .content .box {
+        width: 100%;
+        background-color: #8cffbb;
+        border: .2vw solid #8cffbb;
+        border-radius: 5vw;
+        padding: 5vw 4vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1vw;
+        box-shadow: 0 0 2.5vw rgba(156, 106, 255, 0.89);
+    }
+
+    .map .content .box h3 {
+        color: white;
+        font-size: 7vw;
+    }
+
+    /* ------------------partners------------
+    ---------- */
+    .partners {
+        width: 100%;
+        height: auto;
+        padding: 9vw 5vw;
+        text-align: center;
+        background-color: #04FC8F;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2vw;
+        position: relative;
+    }
+
+    .partners h1 {
+        color: black;
+    }
+
+    .partners .content {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .partners .content img {
+        width: 30%;
+    }
+
+    /*------------------- join -------------
+    --------*/
+    .join {
+        width: 100%;
+        background: #00001C;
+        padding: 10vw 7vw;
+        padding-bottom: 3vw;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3vw;
+        margin-top: -.2vw;
+        position: relative;
+    }
+
+    .join .btn2 {
+        display: flex;
+        align-items: center;
+        gap: 1vw;
+        font-size: 3vw;
+        color: #050505;
+        background: #04FC8F;
+        border-radius: 1.5vw;
+        padding: 2vw;
+        box-shadow: 0 0 1.1vw rgba(4, 252, 143, 0.74);
+        transition: all .2s;
+    }
+
+    .join .btn2:hover {
+        filter: invert(100%);
+    }
+
+    .join .btn2 img {
+        width: 3vw;
+    }
+
+    footer {
+        text-align: center;
+        padding-top: 8vw;
+    }
+
+    footer h1 {
+        color: #FF00FF;
+    }
+
+    footer h1 img {
+        margin: 0 -.5vw;
+    }
+
+    footer .links {
+        padding-top: 4vw;
+        display: flex;
+        align-items: center;
+        gap: 3vw;
+        justify-content: center;
+    }
+
+    footer .links a img {
+        width: 7vw;
+        transition: all .2s;
+    }
+
+    footer .links a img:hover {
+        filter: invert(100%);
+    }
+
+    .copy {
+        width: 100%;
+        background: #000E17;
+        padding: 3vw 5vw;
+        text-align: center;
+    }
+
+    .copy p {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 3.3vw;
+    }
+}
